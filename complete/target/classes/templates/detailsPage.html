@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Notes Library</title>
+	</head>
+	
+	<body>
+	
+	    <object type="application/pdf" th:data="${currentFile.fileEmbedResource}" height="500">file goes here..</object>
+	    
+	    <ul>
+	    	<li th:inline="text">Chapter: [[${currentFile.chapter}]]</li>
+	    	<li th:inline="text">Subject: [[${currentFile.subject}]]</li>
+	    	<li th:inline="text">Description: [[${currentFile.description}]]</li>
+	    	<li th:inline="text">Exam: [[${currentFile.exam}]]</li>
+	    	<li th:inline="text">Chapter: [[${currentFile.chapter}]]</li>
+	    	<li th:inline="text">Grade: [[${currentFile.grade}]]</li>
+	    	<li th:inline="text">School Board: [[${currentFile.schoolBoard}]]</li>
+	    	<li th:inline="text">Institute: [[${currentFile.institute}]]</li>
+	    	
+	    	<li th:inline="text">Download: <a th:href="${currentFile.fileDownloadResource}">Download File</a></li>
+	    </ul>
+	    
+	</body>
+</html>

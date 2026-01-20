@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href=@{/css/styleIndex.css}>
+        <title>Notes Library</title>
+    </head>
+
+    <body>
+        
+        <div id="content">
+        
+            <div id="head">
+                <h1>&#128218 Notes Library</h1>
+            </div>
+
+            <div id="searchBar">
+                <form method="get" action="/search">
+                	<input type="text" placeholder="Search.." name="query" id="searchArea"> <button type="submit" id="searchIconBtn">&#8981</button>
+                </form>
+            </div>
+
+            <div>
+                <p>Contribute: <a href="/upload.html"><button>Contribute</button></a></p>
+            </div>
+            
+        </div>
+        
+        <script th:src="@{/js/src/script1.js}"></script>
+        <script th:src="@{/js/lib/jquery-3.7.1.js}"></script>
+    </body>
+</html>

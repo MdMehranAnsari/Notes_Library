@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    
+	    <title>Notes Library</title>
+	</head>
+	<body>
+		
+		<div th:if="${message}">
+			<h2 th:text="${message}"> </h2>
+		</div>
+	
+		 
+		<div>
+			<form method="POST" enctype="multipart/form-data" action="/upload">
+				<table>
+					<tr> <td>File to upload:</td> <td><input type="file" name="file"/></td> </tr>
+					
+					<tr> <td>Enter subject:</td> <td><input type="text" name="subject"></td> </tr>
+					
+					<tr> <td>Enter chapter:</td> <td><input type="text" name="chapter"></td> </tr>
+					
+					<tr> <td>Enter exam:</td>
+						<td> 
+							<select name="examId" id="exam">
+									<option selected disabled>Select exam</option>
+							</select>
+						</td> 
+					</tr>
+					
+					<tr> <td>Enter description:</td> <td><input type="text" name="description"></td> </tr>
+					
+					<tr> <td>Enter grade:</td>
+						<td> 
+							<select name="gradeId" id="grade">
+									<option selected disabled>Select grade</option>
+							</select>
+							
+						</td> 
+					</tr>
+					
+					<tr> <td>Enter school board:</td>
+						<td>
+							<select name="schoolBoardId" id="schoolBoard">
+									<option selected disabled>Select school board</option>
+							</select>
+						</td> 
+					</tr>
+					
+					<tr> <td>Enter institute name:</td> <td><input type="text" name="institute"></td> </tr>
+					
+					<tr> <td></td> <td><input type="submit" value="Upload" /></td> </tr>
+					
+				</table>
+			</form>
+		</div>
+		
+		
+		
+		<script th:src="@{/js/lib/jquery-3.7.1.js}"></script>
+		<script th:src="@{/js/src/script.js}"></script>
+	</body>
+</html>

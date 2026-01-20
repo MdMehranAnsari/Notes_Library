@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href=@{/css/styleSearchPage.css}>
+        <title>Notes Library</title>
+    </head>
+
+    <body>
+    
+    	<h3>Results that matched:</h3>
+    	<div th:if="${#lists.size(files) > 0}">
+			<ul>
+				<li th:each="file : ${files}">
+					<!-- <a th:href="${file}" th:text="${file}" ></a> -->
+					<div class="fileDiv">
+						<div class="fileImg"><img alt="image goes here" th:src="@{/icons/icon.png}"></div>
+						<ul>
+							<li th:inline="text"><a th:href="@{/details/{customPath}(customPath=${file.fileId})}">Chapter: [[${file.chapter}]]</a></li>
+							<li th:inline="text">Subject: [[${file.subject}]]</li>
+							<li th:inline="text">Exam: [[${file.exam}]]</li>
+							<li th:inline="text">Grade: [[${file.grade}]]</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div th:if="${#lists.size(files) == 0}">
+			<h4>No matching results found.</h4>
+		</div>
+		
+    </body>
+</html>

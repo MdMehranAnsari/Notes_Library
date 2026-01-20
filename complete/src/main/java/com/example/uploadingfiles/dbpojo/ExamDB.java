@@ -8,20 +8,20 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="school_board")
-public class SchoolBoardDB {
+@Table(name="exam")
+public class ExamDB {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="school_board_id")
+	@Column(name="exam_id")
 	private int id;
-	@Column(name="school_board_name")
+	@Column(name="exam_name")
 	private String name;
 	
-	public SchoolBoardDB() {
+	public ExamDB() {
 		
 	}
 
-	public SchoolBoardDB(int id, String name) {
+	public ExamDB(int id, String name) {
 		super();
 		this.id = id;
 		this.name = name;

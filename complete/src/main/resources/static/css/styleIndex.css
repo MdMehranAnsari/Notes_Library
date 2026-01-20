@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+#content {
+    display: grid;
+    place-items: center;
+}
+/*
+#searchBar {
+    display: inline-flex;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px; 
+    padding: 0 0.5em;
+}*/
+
+#searchBar input{
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    width: 500px;
+}
+
+#searchBar input:focus {
+    outline: none;
+}
+
+#searchBar button {
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+#searchBar button:hover {
+    background: #ccc;
+}

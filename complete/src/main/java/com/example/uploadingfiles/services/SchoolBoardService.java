@@ -14,8 +14,13 @@ public class SchoolBoardService {
 	@Autowired
 	private SchoolBoardRepo schoolBoardRepo;
 	
-	public List<SchoolBoardDB> getAllGrades()
+	public List<SchoolBoardDB> getAllSchoolBoards()
 	{
 		return schoolBoardRepo.findAll();
+	}
+	
+	public SchoolBoardDB getSchoolBoardById(int schoolBoardId)
+	{
+		return schoolBoardRepo.getReferenceById(schoolBoardId);
 	}
 }

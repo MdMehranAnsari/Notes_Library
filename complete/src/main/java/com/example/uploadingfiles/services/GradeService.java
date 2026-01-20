@@ -18,4 +18,9 @@ public class GradeService {
 	{
 		return gradeRepo.findAll();
 	}
+	
+	public GradeDB getGradeById(int gradeId)
+	{
+		return gradeRepo.getReferenceById(gradeId);
+	}
 }
